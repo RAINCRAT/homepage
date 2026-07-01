@@ -112,3 +112,12 @@ body {
     white-space: nowrap;
     padding: 0 1rem;
 }
+
+/* ===== 效果聚合类 ===== */
+
+/* Outline + Glow 效果聚合 — 两条独立动画管线并行 */
+.ak-fx--outline-glow {
+    animation:
+        ak-outline-fade 0.7s ease-out infinite,
+        ak-glow 1.5s ease-out infinite alternate;
+}

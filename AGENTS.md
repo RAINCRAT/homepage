@@ -185,6 +185,29 @@ server {
 2. **首页粒子特效**：图片路径为 `images/mainword.png`，更换图片需同步更新 JS 中 `CONFIG.imageSrc`。
 3. **第三方依赖**：优先使用 CDN，如需离线使用请将库文件下载至 `assets/` 目录。
 
+## 效果聚合类
+
+### Outline + Glow 效果聚合
+
+在 `css/home.css` 中提供了效果聚合类，用于同时应用多种动画效果，解决分别使用 `ak-fx--outline` 和 `ak-fx--glow` 时动画冲突的问题。
+
+- **`.ak-fx--outline-glow`**：同时应用 outline 边框渐变和 glow 发光效果，单向循环脉冲
+- **使用方法**：
+  ```html
+  <button class="ak-button ak-button--action ak-fx--outline-glow"
+          style="--ak-outline-color: var(--ak-color-primary); --ak-fx-glow-color: var(--ak-color-primary);">
+      按钮文本
+  </button>
+  ```
+- **CSS 变量**：
+  - `--ak-outline-color`：outline 边框颜色
+  - `--ak-fx-glow-color`：glow 发光颜色
+- **实现要点**：
+  - 使用 CSS 多动画管线（comma-separated `animation`），`ak-outline-fade` 管 outline、`ak-glow` 管 glow，各跑各的互不干扰
+  - `ak-outline-fade`：outline 颜色从实色渐变到透明、粗细从 0.35rem 收缩到 0.2rem、偏移从 0 扩散到 1.5rem，0.7s 单向循环
+  - `ak-glow`：box-shadow 从 0 到 20px 明暗脉冲，1.5s alternate 正反平滑过渡
+  - 保留按钮原有的 drop shadow，不受动画覆盖
+
 ---
 
 ## CSS 样式索引
