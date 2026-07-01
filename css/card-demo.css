@@ -1,0 +1,195 @@
+/* ========================================
+   Card Demo Styles
+   Extracted from card-demo.html
+   ======================================== */
+
+body {
+    background: #fffef8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin: 0;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.card-container,
+.card {
+    width: 120px;
+    height: 250px;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    font-size: 0;
+}
+
+.card-container {
+    margin: 8px;
+    transition: all .4s ease;
+}
+
+.card {
+    background: #fff;
+    cursor: pointer;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, .5));
+    transition: all .2s ease;
+}
+
+.card-ani-in {
+    animation: zoom-in .4s ease forwards;
+}
+
+.card-ani-out {
+    animation: zoom-out .4s ease forwards;
+}
+
+@keyframes zoom-in {
+    to {
+        transform: translateZ(0) scale(1.2);
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        transform: translateZ(0) scale(1.2);
+    }
+}
+
+.card-bg {
+    position: absolute;
+    inset: 0 0 36px;
+    background: #fff;
+    z-index: 0;
+}
+
+.image-area {
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    width: 120px;
+    height: 240px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image-main {
+    position: absolute;
+    z-index: 1;
+    transition: left .1s ease-out, top .1s ease-out, filter .1s ease-out;
+}
+
+.dot-pattern {
+    position: absolute;
+    right: -50px;
+    bottom: -33px;
+    width: 200px;
+    height: 100px;
+    background-image:
+        radial-gradient(rgba(0, 0, 0, .2) 6%, transparent 7%),
+        radial-gradient(rgba(0, 0, 0, .2) 12%, transparent 13%),
+        radial-gradient(rgba(0, 0, 0, .2) 16%, transparent 17%),
+        radial-gradient(rgba(0, 0, 0, .2) 20%, transparent 21%),
+        radial-gradient(rgba(0, 0, 0, .2) 25%, transparent 26%),
+        radial-gradient(rgba(0, 0, 0, .2) 26%, transparent 27%),
+        radial-gradient(rgba(0, 0, 0, .2) 30%, transparent 31%),
+        radial-gradient(rgba(0, 0, 0, .2) 32%, transparent 33%),
+        radial-gradient(rgba(0, 0, 0, .2) 35%, transparent 36%),
+        radial-gradient(rgba(0, 0, 0, .2) 32%, transparent 33%),
+        radial-gradient(rgba(0, 0, 0, .2) 35%, transparent 36%),
+        radial-gradient(rgba(0, 0, 0, .2) 32%, transparent 33%),
+        radial-gradient(rgba(0, 0, 0, .2) 35%, transparent 36%),
+        radial-gradient(rgba(0, 0, 0, .2) 32%, transparent 33%),
+        radial-gradient(rgba(0, 0, 0, .2) 35%, transparent 36%),
+        radial-gradient(rgba(0, 0, 0, .2) 32%, transparent 33%);
+    background-size: 10px 10px;
+    background-position:
+        0 0, 5px 5px,
+        0 10px, 5px 15px,
+        0 20px, 5px 25px,
+        0 30px, 5px 35px,
+        0 40px, 5px 45px,
+        0 50px, 5px 55px,
+        0 60px, 5px 65px,
+        0 70px, 5px 75px,
+        0 80px, 5px 85px,
+        0 90px, 5px 95px,
+        0 100px, 5px 105px;
+    background-repeat: repeat-x;
+    transform: rotate(-15deg);
+    z-index: 0;
+}
+
+.badge,
+.badge-shadow {
+    position: absolute;
+    top: 5px;
+    right: -7px;
+    height: 20px;
+}
+
+.badge {
+    width: 66px;
+    background: #0224ff;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.badge-shadow {
+    width: 30px;
+    background: #1f1f8a;
+    transform: rotate(-45deg);
+    transform-origin: bottom right;
+    z-index: -1;
+}
+
+.title,
+.subtitle {
+    position: absolute;
+    left: 4px;
+    font-weight: bold;
+    line-height: 12px;
+}
+
+.title {
+    top: 220px;
+    color: #5b5b5b;
+    font-size: 13px;
+}
+
+.subtitle {
+    bottom: 4px;
+    color: #9d9d9d;
+    font-size: 16px;
+    white-space: nowrap;
+    transform: scale(.5);
+    transform-origin: left;
+}
+
+.overlay-area {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 240px;
+    overflow: hidden;
+    z-index: 0;
+    transition: all .4s ease;
+    transform-origin: left top;
+}
+
+.overlay-img {
+    filter: invert();
+    position: relative;
+    transition: left .1s ease-out, top .1s ease-out;
+}
+
+.brand-logo {
+    position: absolute;
+    top: 8px;
+    left: -16px;
+    width: 100px;
+}

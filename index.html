@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAINCRAT雨绘巷|Home（开发中）</title>
+    <link rel="stylesheet" href="css/ak-ui.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <canvas id="canvas"></canvas>
+
+
+    <div class="footer">
+        <div class="ak-divider">
+            <span>RAINCRAT HOME | 中心导航站</span>
+        </div>
+        <div>页面尚未完成<del>，正在鞭策可露希尔</del></div>
+    </div>
+
+    <script src="js/flowing-points.js"></script>
+    <script>
+        FlowingPoints.init({
+            imageSrc: 'images/mainword.png',
+            bgColor: '#000000',
+            particleColor: '#ffffff',
+            particleSize: 3,
+            particleMargin: 0,
+            repulsionRadius: 125,
+            repulsionForce: 3,
+            friction: 0.25,
+            returnSpeed: 0.005,
+            samplingStep: 3,
+            maxDisplayRatio: 0.75,
+            maxImageSize: 3000
+        });
+    </script>
+
+</body>
+
+</html>

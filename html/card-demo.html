@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稀音可爱捏 - Card Demo</title>
+    <link rel="stylesheet" href="../css/card-demo.css">
+    <link rel="stylesheet" href="../css/ak-ui.css">
+</head>
+
+<body>
+
+    <div class="card-container card-ani-out">
+        <div class="card card-inner"
+            style="transform: perspective(500px) scale(1); box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0;">
+            <div class="card-bg"></div>
+            <div class="image-area">
+                <div class="dot-pattern"></div>
+            </div>
+            <div class="image-area" style="overflow: inherit;">
+                <div class="image-main" style="left: 0; top: 0; filter: none;">
+                    <div style="height: 120px;"></div>
+                    <img loading="lazy" src="../images/yezi.png" width="120" alt="card image">
+                </div>
+            </div>
+            <div class="overlay-area" style="transform: translateZ(0) scale(1);">
+                <div class="">
+                    <div class="brand-logo"><img src="../images/ganshu.png" width="100%" alt="logo"></div>
+                </div>
+            </div>
+            <div class="badge">江西南昌</div>
+            <div class="badge-shadow"></div>
+            <div class="title">依V为耶</div>
+            <div class="subtitle">赣术会会长</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="../js/card-demo.js"></script>
+
+</body>
+
+</html>

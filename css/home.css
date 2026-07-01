@@ -1,0 +1,114 @@
+/* ========================================
+   Home Page Styles
+   Raincrat 雨绘巷 — 入口首页
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    font-family: 'Noto Sans SC', Roboto, Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* ===== 粒子画布 ===== */
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* ===== 前景卡片 ===== */
+
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+}
+
+/* ===== 导航链接 ===== */
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #eee;
+    text-decoration: none;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== 页脚 ===== */
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 0.75rem;
+    color: #555;
+    padding: 0 3rem;
+}
+
+.footer .ak-divider {
+    margin: 0.5rem 0;
+}
+
+.footer .ak-divider::before,
+.footer .ak-divider::after {
+    flex: 1;
+    width: auto;
+}
+
+.footer .ak-divider span {
+    width: auto;
+    white-space: nowrap;
+    padding: 0 1rem;
+}
