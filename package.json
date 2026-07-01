@@ -1,7 +1,7 @@
 {
-  "name": "LAYOSERVE.home",
+  "name": "RAINCRAT.home",
   "version": "1.0.0",
-  "description": "LAYOSERVE Home - Static Web Project",
+  "description": "RAINCRAT Home - Static Web Project",
   "main": "index.js",
   "scripts": {
     "build:css": "sass scss/ak-ui.scss css/ak-ui.css",

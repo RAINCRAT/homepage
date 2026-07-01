@@ -1,13 +1,13 @@
-# AGENTS.md — LAYOSERVE Home 代理配置
+# AGENTS.md — RAINCRAT Home 代理配置
 
 ## 项目概述
 
-本项目为 LAYOSERVE Home 静态前端站点，采用标准前端项目结构组织资源。首页使用 Canvas 粒子特效（移植自 [Arknights-FlowingPoints](https://github.com/BlackCoder0/Arknights-FlowingPoints)）作为背景，鼠标划过时粒子向四周扩散排斥。
+本项目为 RAINCRAT Home 静态前端站点，采用标准前端项目结构组织资源。首页使用 Canvas 粒子特效（移植自 [Arknights-FlowingPoints](https://github.com/BlackCoder0/Arknights-FlowingPoints)）作为背景，鼠标划过时粒子向四周扩散排斥。
 
 ## 目录结构
 
 ```
-LAYOSERVE.home/
+RAINCRAT.home/
 ├── index.html              # 站点入口首页（粒子特效背景 + 居中导航卡片）
 ├── html/                   # HTML 页面目录
 │   ├── card-demo.html      # 卡片展示页面（3D 倾斜鼠标跟随效果）
@@ -151,9 +151,9 @@ node _server.js
 ```nginx
 server {
     listen 80;
-    server_name LAYOSERVE.home;
+    server_name RAINCRAT.home;
 
-    root /path/to/LAYOSERVE.home;
+    root /path/to/RAINCRAT.home;
     index index.html;
 
     # 静态资源缓存
