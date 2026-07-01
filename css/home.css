@@ -121,3 +121,12 @@ body {
         ak-outline-fade 0.7s ease-out infinite,
         ak-glow 1.5s ease-out infinite alternate;
 }
+
+.no-blue:link,
+.no-blue:visited,
+.no-blue:hover,
+.no-blue:active {
+    color: #cccccc;
+    /* 或 inherit / 任意指定颜色 */
+    text-decoration: none;
+}
